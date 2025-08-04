@@ -1,5 +1,5 @@
 import React from "react";
-import MohsinImage from "../assets/Engineer Mohsin Image.jpg";
+import MohsinImage from "../assets/Engineer Mohsin Image.png";
 import { HERO_CONTENT } from "../constants";
 const Hero = () => {
   return (
