@@ -49,13 +49,14 @@ To run this locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/portfolio-website.git
+git clone https://github.com/engineer-mohsin/Engr-Mohsin-Portfolio
 
 # 2. Navigate to the project directory
-cd portfolio-website
+cd Engr-Mohsin-Portfolio
 
 # 3. Install dependencies
 npm install
 
 # 4. Start the development server
 npm run dev
+
