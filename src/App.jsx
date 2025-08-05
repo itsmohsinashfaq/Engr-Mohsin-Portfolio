@@ -44,7 +44,7 @@ const App = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className="fixed bottom-2 left-2 z-50 flex flex-col gap-3"
+                className="fixed bottom-4 left-2 z-50 flex flex-col gap-3"
               >
                 <WhatsAppButton />
               </motion.div>
@@ -54,7 +54,7 @@ const App = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className="fixed bottom-2 right-2 z-50 flex flex-col gap-3"
+                className="fixed bottom-4 right-2 z-50 flex flex-col gap-3"
               >
                 <TopButton />
               </motion.div>
