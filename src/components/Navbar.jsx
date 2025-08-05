@@ -1,11 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import logo from "../assets/Engr.MohsinLogo.webp";
 
 // Animation variant
@@ -31,14 +26,15 @@ const Navbar = () => {
       variants={fadeDown}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
+      className="py-5 my-3 sm:my-5 "
     >
-      <nav className="flex items-center justify-between py-5">
+      <nav className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-between sm:items-center ">
         {/* Logo */}
         <motion.div
           variants={fadeDown}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="flex flex-shrink-0 items-center"
+          className="flex items-center justify-center mb-3 sm:mb-0"
         >
           <a href="/" aria-label="Home">
             <img
@@ -56,7 +52,7 @@ const Navbar = () => {
           variants={fadeDown}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="m-8 flex items-center justify-center gap-4 text-2xl text-gray-300"
+          className="flex items-center justify-center gap-6 text-2xl text-gray-300"
         >
           {/* LinkedIn */}
           <motion.a
@@ -64,8 +60,13 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            animate={{ color: [ "#ccc", brandColors.linkedin, "#ccc" ] }}
-            transition={{ repeat: Infinity, duration: 3, delay: 0 }}
+            animate={{ color: [ brandColors.linkedin,"#ccc", brandColors.linkedin] }}
+            transition={{
+              repeat: Infinity,
+              repeatDelay: 5,
+              duration: 1,
+              delay: 0,
+            }}
           >
             <FaLinkedin />
           </motion.a>
@@ -76,8 +77,13 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Github"
-            animate={{ color: [ "#ccc", brandColors.github, "#ccc" ] }}
-            transition={{ repeat: Infinity, duration: 3, delay: 1 }}
+            animate={{ color: [brandColors.github,"#ccc", brandColors.github] }}
+            transition={{
+              repeat: Infinity,
+              repeatDelay: 5,
+              duration: 1,
+              delay: 0,
+            }}
           >
             <FaGithub />
           </motion.a>
@@ -88,8 +94,13 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            animate={{ color: [ "#ccc", brandColors.instagram, "#ccc" ] }}
-            transition={{ repeat: Infinity, duration: 3, delay: 2 }}
+            animate={{ color: [ brandColors.instagram,"#ccc", brandColors.instagram] }}
+            transition={{
+              repeat: Infinity,
+              repeatDelay: 5,
+              duration: 1,
+              delay: 0,
+            }}
           >
             <FaInstagram />
           </motion.a>
@@ -100,8 +111,13 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
-            animate={{ color: [ "#ccc", brandColors.whatsapp, "#ccc" ] }}
-            transition={{ repeat: Infinity, duration: 3, delay: 3 }}
+            animate={{ color: [ brandColors.whatsapp,"#ccc", brandColors.whatsapp] }}
+            transition={{
+              repeat: Infinity,
+              repeatDelay: 5,
+              duration: 1,
+              delay: 0,
+            }}
           >
             <FaWhatsapp />
           </motion.a>

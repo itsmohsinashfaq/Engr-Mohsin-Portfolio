@@ -33,7 +33,7 @@ const Contact = () => {
           },
         },
       }}
-      className=" py-5 text-center backdrop-blur-sm shadow-inner"
+      className=" py-7 text-center backdrop-blur-sm shadow-inner"
     >
       {/* Heading */}
       <motion.h2
@@ -46,17 +46,12 @@ const Contact = () => {
 
       {/* Content */}
       <div className="mx-auto max-w-xl text-stone-300 tracking-tight space-y-2">
-        <motion.p variants={fadeUp} custom={1}>
-          {CONTACT.address}
-        </motion.p>
+        
 
         <motion.p variants={fadeUp} custom={2}>
           <a
-            href="https://wa.me/+923700506393?text=Hello%2C%20I%20got%20your%20number%20from%20your%20Portfolio."
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="transition-all duration-300 hover:text-teal-400 hover:underline"
+            href={`tel:${CONTACT.phoneNo}`}
+            className="cursor-pointer underline"
           >
             {CONTACT.phoneNo}
           </a>
@@ -65,7 +60,7 @@ const Contact = () => {
         <motion.p variants={fadeUp} custom={3}>
           <a
             href={`mailto:${CONTACT.email}`}
-            className="transition-all duration-300 hover:text-teal-400 hover:underline"
+            className="cursor-pointer underline"
           >
             {CONTACT.email}
           </a>
@@ -74,7 +69,7 @@ const Contact = () => {
 
       {/* Footer */}
       <motion.div
-        className="mt-12 text-xs text-stone-500 border-t border-stone-900 pt-3"
+        className="mt-16 text-xs text-stone-500 border-t border-stone-900 pt-3"
         variants={fadeUp}
         custom={4}
       >

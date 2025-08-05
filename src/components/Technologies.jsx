@@ -1,59 +1,46 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { RiReactjsLine } from "react-icons/ri";
-import {
-  TbBrandHtml5,
-  TbBrandCss3,
-  TbBrandJavascript,
-  TbBrandTailwind,
-  TbBrandBootstrap,
-  TbBrandNodejs,
-} from "react-icons/tb";
-import {
-  SiMongodb,
-  SiWordpress,
-  SiMysql,
-  SiExpress,
-  SiCanva,
-  SiAdobeillustrator,
-  SiCoreldraw,
-} from "react-icons/si";
-import {
-  FaGithub,
-  FaGit,
-  FaFileWord,
-  FaFileExcel,
-  FaFilePowerpoint,
-  FaRobot,
-} from "react-icons/fa";
+import HTML from "../assets/icons/HTML.svg";
+import CSS from "../assets/icons/CSS.svg";
+import JAVASCRIPT from "../assets/icons/JavaScript.svg";
+import BOOTSTRAP from "../assets/icons/Bootstrap.svg";
+import TAILWIND from "../assets/icons/tailwind_css.svg";
+import NPM from "../assets/icons/Npm-Dark.svg";
+import VITE from "../assets/icons/Vite-Dark.svg";
+import REACTJS from "../assets/icons/React-Dark.svg";
+import NODEJS from "../assets/icons/NodeJS-Dark.svg";
+import EXPRESSJS from "../assets/icons/ExpressJS-Dark.svg";
+import MONGODB from "../assets/icons/MongoDB.svg";
+import MYSQL from "../assets/icons/MySQL-Dark.svg";
+import PYTHON from "../assets/icons/Python-Dark.svg";
+import WORDPRESS from "../assets/icons/wordpress.svg";
+import GITHUB from "../assets/icons/Github-Dark.svg";
+import ILLUSTRATOR from "../assets/icons/Illustrator.svg";
+import CANVA from "../assets/icons/canvapro.svg";
+import GIT from "../assets/icons/git.svg";
+import CHATGPT from "../assets/icons/gpt.svg";
 
 const Technologies = () => {
   const tools = [
-    { icon: <TbBrandHtml5 className="text-7xl text-[#E44D26]" /> },
-    { icon: <TbBrandCss3 className="text-7xl text-[#0033ff]" /> },
-    { icon: <TbBrandJavascript className="text-7xl text-[#F0DB4F]" /> },
-    { icon: <TbBrandTailwind className="text-7xl text-[#0051ff]" /> },
-    { icon: <TbBrandBootstrap className="text-7xl text-[#6600ff]" /> },
-    { icon: <RiReactjsLine className="text-7xl text-[#00aeff]" /> },
-    { icon: <TbBrandNodejs className="text-7xl text-[#16cf05]" /> },
-    { icon: <SiExpress className="text-7xl text-[#00ff4c]" /> },
-    { icon: <SiMongodb className="text-7xl text-[#4DB33D]" /> },
-    { icon: <SiMysql className="text-7xl text-[#04b0d6]" /> },
-    { icon: <SiWordpress className="text-7xl text-[#0486c2]" /> },
-    { icon: <FaFileWord className="text-7xl text-blue-700" /> },
-    { icon: <FaFileExcel className="text-7xl text-green-600" /> },
-    { icon: <FaFilePowerpoint className="text-7xl text-orange-600" /> },
-    { icon: <SiAdobeillustrator className="text-7xl text-orange-700" /> },
-    { icon: <SiCoreldraw className="text-7xl text-green-500" /> },
-    { icon: <SiCanva className="text-7xl text-[#00C4CC]" /> },
-    {
-      icon: <FaRobot className="text-7xl text-purple-500" />,
-      label: "ChatGPT",
-    },
-    { icon: <FaRobot className="text-7xl text-indigo-500" />, label: "Gemini" },
-    { icon: <FaRobot className="text-7xl text-gray-400" />, label: "Blackbox" },
-    { icon: <FaGithub className="text-7xl text-white" /> },
-    { icon: <FaGit className="text-7xl text-orange-500" /> },
+    { icon: HTML },
+    { icon: CSS },
+    { icon: JAVASCRIPT },
+    { icon: BOOTSTRAP },
+    { icon: TAILWIND },
+    { icon: NPM },
+    { icon: VITE },
+    { icon: REACTJS },
+    { icon: NODEJS },
+    // { icon: EXPRESSJS },
+    // { icon: MONGODB },
+    // { icon: MYSQL },
+    { icon: PYTHON },
+    { icon: WORDPRESS },
+    { icon: GIT },
+    { icon: GITHUB },
+    { icon: CANVA },
+    { icon: ILLUSTRATOR },
+    { icon: CHATGPT },
   ];
 
   const ref = useRef(null);
@@ -72,10 +59,10 @@ const Technologies = () => {
           },
         },
       }}
-      className="pb-24"
+      className="pb-10"
     >
       <h2 className="my-20 text-center text-4xl">Technologies</h2>
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-4 ">
         {tools.map((tool, i) => (
           <motion.div
             key={i}
@@ -90,14 +77,12 @@ const Technologies = () => {
             }}
             whileHover={{
               scale: 1.1,
-              y: -10,
               transition: { type: "spring", stiffness: 300 },
             }}
             className="p-3 rounded-xl border border-stone-600 hover:border-stone-400 cursor-pointer backdrop-blur-sm bg-[#38bdf81c] transition-all duration-100"
           >
             <div className="flex flex-col items-center text-stone-300">
-              {tool.icon}
-              {tool.label && <span className="mt-2 text-xs">{tool.label}</span>}
+              <img src={tool.icon} alt="Logo Image" className="h-10 w-10" />
             </div>
           </motion.div>
         ))}

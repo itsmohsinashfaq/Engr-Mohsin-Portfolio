@@ -47,7 +47,7 @@ const Experiences = () => {
         {EXPERIENCES.map((experience, index) => (
           <motion.div
             key={index}
-            className="mx-auto w-full max-w-5xl rounded-2xl border border-[#ffffff1a] bg-[#ffffff0a] px-6 py-8 backdrop-blur-md shadow-lg shadow-[#38bdf81a] hover:scale-[1.01] transition-all duration-300 hover:shadow-[#38bdf844] mb-6"
+            className="mx-auto w-full max-w-5xl rounded-2xl border border-[#ffffff1a] bg-[#ffffff0a] px-6 py-14 backdrop-blur-md shadow-lg shadow-[#38bdf81a] hover:scale-[1.01] transition-all duration-300 hover:shadow-[#38bdf844] mb-6"
             variants={fadeInUp}
             whileHover={{
               scale: 1.015,

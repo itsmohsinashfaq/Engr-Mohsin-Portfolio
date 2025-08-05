@@ -1,11 +1,11 @@
-import project1 from "../assets/projects/project-1.webp";
-import project2 from "../assets/projects/project-2.webp";
-import project3 from "../assets/projects/project-3.webp";
-import project4 from "../assets/projects/project-4.webp";
+import project1 from "../assets/projects/pharmacy-management-system.webp";
+import project2 from "../assets/projects/mobile-app.webp";
+import project3 from "../assets/projects/portfolio.webp";
+import project4 from "../assets/projects/mohsin-steel-fabricators.webp";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I’m a passionate front-end developer with 1 year of hands-on experience building responsive and dynamic websites. I specialize in HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap, and also work with Node.js and WordPress. I love crafting modern, user-focused web interfaces that not only look great but also perform efficiently. My goal is to keep growing, take on exciting challenges, and deliver top-notch digital experiences.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated front-end developer with a strong focus on building clean, responsive, and engaging web applications. Over the past year, I’ve gained experience working with modern technologies including React, Tailwind CSS, Bootstrap, JavaScript, HTML, and CSS. I’ve also explored backend basics using Node.js and developed dynamic websites with WordPress. My passion for development comes from a desire to bring ideas to life and continuously improve my skills. I enjoy taking on new challenges, learning emerging tools, and delivering results that exceed expectations.`;
 
 export const EXPERIENCES = [
   {
@@ -40,39 +40,49 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Pharmacy Management System",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    code: "https://github.com/yourusername/ecommerce-website",
+      "A fully functional static desktop application for Pharmacy Management, designed to streamline daily operations. It includes features like product listing with pricing, customer receipt generation, sales record management, data fetching, and bill printing. Ideal for small to medium-sized pharmacies requiring an offline solution.",
+    technologies: ["Python", "Tkinter", "OOP", "SqlLite"],
+    code: "https://github.com/engineer-mohsin/Pharmacy-Management-System/",
+    live: "https://1024terabox.com/s/1F7DtjOHJb7n_SZULbRzEhQ",
   },
   {
-    title: "Task Management App",
+    title: "Tailor Mobile App",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-    code: "https://github.com/yourusername/task-management-app",
+      "A mobile application built with Flutter for tailoring businesses to manage clients, measurements, and order tracking efficiently. The app allows tailors to save customer details, record precise measurements, and monitor order progress with specific delivery dates and times. Designed for both Android and iOS platforms, it uses a local database for offline access and fast performance.",
+    technologies: ["Flutter", "Dart", "Android", "iOS"],
+    code: "https://github.com/engineer-mohsin/Tailor-App",
+    live: "https://1024terabox.com/s/1c8NVEg6J1BDrZkMICVlgFw",
   },
   {
     title: "Portfolio Website",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    code: "https://github.com/yourusername/portfolio-website",
+      "A modern and responsive personal portfolio website built to highlight my web development projects, technical skills, and contact details. Designed with smooth animations and a clean UI using React, Tailwind CSS, and Framer Motion.",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    code: "https://github.com/engineer-mohsin/Engr-Mohsin-Portfolio",
+    live: "https://engr-mohsin-portfolio.netlify.app",
   },
   {
-    title: "Blogging Platform",
+    title: "Steel Business Website",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    code: "https://github.com/yourusername/blogging-platform",
+      "A responsive and professionally designed business website developed to showcase the services, projects, and contact information of Mohsin Steel Fabricators. Built using modern web technologies for a clean user interface and smooth experience.",
+    technologies: ["HTML", "CSS", "JavaScript", "React.js"],
+    code: "https://github.com/engineer-mohsin/Mohsin-Steel-Fabricators",
+    live: "https://mohsin-steel-fabricators.netlify.app",
   },
 ];
-
 
 export const CONTACT = {
   address: "Peshawar Pakistan",
