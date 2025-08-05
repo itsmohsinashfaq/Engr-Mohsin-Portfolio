@@ -2,12 +2,12 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { EXPERIENCES } from "../constants";
 
+// Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
       duration: 0.6,
       ease: "easeOut",
@@ -28,7 +28,8 @@ const Experiences = () => {
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.2,
+            staggerChildren: 0.15,
+            delayChildren: 0.1,
           },
         },
       }}
@@ -37,9 +38,7 @@ const Experiences = () => {
       {/* Heading */}
       <motion.h2
         className="my-20 text-center text-4xl"
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.2 }}
+        variants={fadeInUp}
       >
         Experiences
       </motion.h2>
@@ -48,67 +47,45 @@ const Experiences = () => {
         {EXPERIENCES.map((experience, index) => (
           <motion.div
             key={index}
-            className="mx-auto w-full max-w-5xl rounded-2xl border  border-[#ffffff1a] bg-[#ffffff0a]  px-6 py-8 backdrop-blur-md shadow-lg shadow-[#38bdf81a] hover:scale-[1.01] transition-all duration-300 hover:shadow-[#38bdf844] mb-6"
+            className="mx-auto w-full max-w-5xl rounded-2xl border border-[#ffffff1a] bg-[#ffffff0a] px-6 py-8 backdrop-blur-md shadow-lg shadow-[#38bdf81a] hover:scale-[1.01] transition-all duration-300 hover:shadow-[#38bdf844] mb-6"
             variants={fadeInUp}
             whileHover={{
-
-              scale: 1.02,
+              scale: 1.015,
+              transition: { type: "spring", stiffness: 200 },
             }}
           >
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Year */}
-              <motion.div className="w-full lg:w-1/4">
-                <motion.p
-                  className="text-sm text-stone-400"
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.2 }}
-                >
-                  {experience.year}
-                </motion.p>
-              </motion.div>
+              <div className="w-full lg:w-1/4">
+                <p className="text-sm text-stone-400">{experience.year}</p>
+              </div>
 
               {/* Content */}
-              <motion.div className="w-full lg:w-3/4">
-                <motion.h3
-                  className="mb-2 text-xl font-semibold text-white"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.2 }}
-                >
+              <div className="w-full lg:w-3/4">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   {experience.role} -{" "}
                   <span className="text-sm text-stone-400">
                     {experience.company}
                   </span>
-                </motion.h3>
+                </h3>
 
-                <motion.p
-                  className="mb-4 text-stone-300"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.2 }}
-                >
+                <p className="mb-4 text-stone-300">
                   {experience.description}
-                </motion.p>
+                </p>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {experience.technologies.map((technology, techIndex) => (
+                  {experience.technologies.map((tech, i) => (
                     <motion.span
-                      key={techIndex}
+                      key={i}
                       className="rounded bg-cyan-500 px-2 py-1 text-sm font-medium text-[#0f0f0f] backdrop-blur"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                      transition={{
-                        duration: 0.2,
-                        delay: techIndex * 0.05,
-                      }}
+                      variants={fadeInUp}
                     >
-                      {technology}
+                      {tech}
                     </motion.span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         ))}
